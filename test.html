@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .neitrino {
+        display: grid;
+        grid-template-columns: repeat(3, 100px);
+        justify-content: center;
+        gap: 24px;
+        padding: 60px 0;
+        font-family: sans-serif;
+      }
+      
+   
+      .cardNo {
+        position: relative;
+        margin: 0 auto;
+        width: 100px;
+        height: 100px;
+       /* background-color: #2196e0;*/
+        color: #fff;
+        font-size: 18px;
+        border-radius: 16px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      /*.card:nth-child(2n) {
+        background-color: #2196e0;
+      }
+      
+      .card:nth-child(3n) {
+        background-color: #1b5aa4;
+      }*/
+      
+      .card {
+        position: relative;
+        margin: 0 auto;
+        width: 100px;
+        height: 100px;
+       background-color: #fff;
+       text-align: center;
+        color: #000000;
+        font-size: 14px;
+        border-radius: 16px;
+        cursor: pointer;
+        /* Включаем 3D трансформацию, задаем перспективу и длительность*/
+        transform-style: preserve-3d;	
+        perspective: 1000px;
+        transition: transform 2s ease-in-out;
+      }
+      
+      /* Разворачиваем карточку */
+      .card:hover,
+      .card.active {
+        transform: rotate3d(0, 1, 0, 180deg);
+      }
+      
+      /* Отодвигаем вперед */
+      .card_forvard {
+        transform: translateZ(40px);
+
+      }
+      
+      /* Отодвигаем вперед и зеркально отражаем */
+      .card_back {
+        transform: translateZ(-40px) scale(-1, 1);
+        color: #000000;
+        background: yellow;
+        height: 100%;
+        width: 100%;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+</style>
+
+<body>
+    <div class="neitrino">
+        <div class="card">
+          <div class="card_forvard"></div>
+          <div class="card_back">Сетевой сток</div>
+        </div>
+        <div class="card ">
+          <div class="card_forvard"></div>
+          <div class="card_back">Прилоежние Qt</div>
+        </div>
+        <div class="card">
+          <div class="card_forvard"></div>
+          <div class="card_back">Прилоежние OpenGL</div>
+        </div>
+        <div class="card">
+          <div class="card_forvard"></div>
+          <div class="card_back">Драйвер устройства</div>
+        </div>
+        <div class="cardNo">
+          <div class="card_forvard"><img src="/upload/medialibrary/c04/uifuz3uoipb4qe8l680rbxlufv861zik.jpg" alt=""></div>
+        </div>
+        <div class="card">
+          <div class="card_forvard"></div>
+          <div class="card_back">Приложение POSIX</div>
+        </div>
+        <div class="card">
+          <div class="card_forvard"></div>
+          <div class="card_back">Оконный менеджер</div>
+        </div>
+        <div class="card">
+          <div class="card_forvard"></div>
+          <div class="card_back">Пульт управления КСЗ</div>
+        </div>
+        <div class="card">
+          <div class="card_forvard"></div>
+          <div class="card_back">Встроенная СУБД</div>
+        </div>
+      </div>
+</body>
+<script>
+    let arr = document.querySelectorAll('.card');
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * max);
+    }
+    let timerId = setInterval(() => {
+    for(var i = 0; i < arr.length; i++) {
+        arr[i].classList.remove('active');
+        arr[getRandomInt(7)].classList.add('active');
+    }
+   
+    }, 2000);
+</script>
+</html>
