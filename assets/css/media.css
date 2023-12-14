@@ -133,6 +133,7 @@
         background: #fff;
         z-index: 9;
         height: 100%;
+        padding: 17px 25px;
     }
     .mobileMenuClose {
         position: absolute;
@@ -151,6 +152,7 @@
     }
     .navigation .menu li.dropdown .submenu a {
         color: var(--color-grey-3);
+        font-size: 18px;
     }
     .mainTabsSection .productItem:not(:last-child) {
         margin-right: 0;
@@ -174,6 +176,9 @@
         flex-direction: column;
         gap: 20px;
     }
+    .dinamicPanel {
+        padding: 10px 0 10px;
+    }
     .formCardBig form .input {
         width: 100%;
     }
@@ -186,12 +191,11 @@
     .mainCatalogItem img {
         width: 100%;
     }
-    .blockPhones,
-    .shopBlock  {
-        display: none;
-    }
-    .mobilePanel .shopBlock  {
-        display: block;
+    .mobilePanel .shopBlock {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        justify-content: flex-end;
     }
     .mobilePanel .blockPhones {
         display: flex;
@@ -199,7 +203,10 @@
         width: 100%;
     }
     .blockPhones .phones,
-    .topPanel {
+    .topPanel,
+    .shopBlock a,
+    .blockPhones,
+    .shopBlock  {
         display: none;
     }
     .mobilePanel {
@@ -235,5 +242,53 @@
     .mobileMenu {
         flex-direction: column;
         align-items: flex-start;
+    }
+    .mobilePanel {
+        padding: 14px 15px;
+        margin: 17px 0;
+    }
+    .img img,
+    .shopBlock a.count {
+        display: block;
+    }
+    .topSocial {
+        position: unset;
+        margin: 0 auto 30px;
+    }
+    .formSearch {
+        max-width: 70%;
+    }
+    .social a {
+        fill: var(--color-blue);
+        width: 50px;
+        height: 50px;
+    }
+    .mobileMenu.active  .btnCatalog {
+        background: var(--color-blue);
+        margin: 30px auto 40px;
+        max-width: 320px;
+        width: 100%;
+        justify-content: center;
+    }
+    .navigation .menu li.dropdown .submenu li:not(:last-child) {
+        margin: 0 0 17px 0;
+    }
+    .navigation .menu li:not(:last-child) {
+        margin: 0 0 30px 0;
+    }
+    
+    .topPanel .icon {
+        fill: var(--color-black);
+    }
+    .city {
+        color: var(--color-blue);
+        font-weight: 500;
+        font-size: 18px;
+        fill: var(--color-blue);
+        margin-bottom: 40px;
+    }
+    .workingHours {
+        margin: 0 auto;
+        font-size: 23px;
     }
 }

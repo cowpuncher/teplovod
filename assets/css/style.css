@@ -137,7 +137,14 @@ section {
     padding-left: 20px;
     
 }
+.social a {
+    fill: var(--color-white);
+}
 
+.social a svg {
+    width: 100%;
+    height: 100%;
+}
 .content .download {
     display: flex;
     align-items: center;
@@ -1215,6 +1222,9 @@ input::-webkit-inner-spin-button {
 }
 .topSocial a:not(:first-child) {
     margin-left: 40px;
+}
+.topPanel .icon {
+    fill: var(--color-white);
 }
 /* ANCHOR -- Dinamic panel */
 .dinamicPanel {
