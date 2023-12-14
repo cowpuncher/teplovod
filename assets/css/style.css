@@ -370,6 +370,13 @@ textarea {
 .tabsContent [data-tab-content].active {
     display: flex;
 }
+.productListWrap {
+    width: 50%;
+    padding: 10px;
+}
+.mobilePanel {
+    display: none;
+}
 /* ANCHOR -- breadcrumbs */
 .breadcrumbs {
     display: flex;
@@ -1000,10 +1007,12 @@ input[type="range"]:active::-webkit-slider-thumb{
 }
 /* ANCHOR -- products */
 .productItem {
-    max-width: 336px;
     width: 100%;
     position: relative;
     overflow: hidden;
+}
+.tabsContent {
+    margin: -10px;
 }
 .mainTabsSection .productItem:not(:last-child) {
     margin-right: 20px;
@@ -1291,6 +1300,10 @@ input::-webkit-inner-spin-button {
 .navigation .menu {
     display: flex;
     align-items: flex-start;
+}
+.burgerMenu, 
+.mobileMenu {
+    display: none;
 }
 .dropdown .submenu {
     display: none;
@@ -1825,7 +1838,6 @@ input::-webkit-inner-spin-button {
 }
 /* ANCHOR Продукты на главной */
 .productList {
-
     display: flex;
     width: 100%;
 }

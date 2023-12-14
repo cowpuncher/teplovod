@@ -66,8 +66,174 @@
         width: 85px;
         overflow: hidden;
     }
+    .footerBottom {
+        font-size: 14px;
+    }
 }
 
 @media screen and (max-width: 993px) {
+    .headerWrap {
+        flex-wrap: wrap;
+    }
+    .formSearch {
+        margin: 0 auto 0 20px;
+    }
+    .shopBlock {
+        margin-top: 15px;
+        width: 100%;
+        text-align: end;
+    }
+    .blockPhones {
+        text-align: right;
+    }
+    .navigation .menu {
+        display: none;
+    }
+    .mobileMenu {
+        display: flex;
+    }
+    .mobileMenu .menu {
+        display: flex;
+        flex-direction: column;
+    }
+    .burgerMenu {
+        display: block;
+    }
+    .mobileMenu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transform: translate(0, -100%);
+        width: 100%;
+    }
+    .burgerMenu span {
+        display: block;
+        height: 6px;
+        width: 38px;
+        background: #ee6800;
+        border-radius: 10px;
+    }
+    .navigationWrap {
+        align-items: center;
+    }
+    .burgerMenu span:not(:last-child) {
+        margin-bottom: 8px;
+    }
+    .mainCatalogItem,
+    .whyListItem {
+        width: 50%;
+    }
+    .footerTitle {
+        font-size: 14px;
+    }
+    .mobileMenu.active {
+        transform: translate(0, 0);
+        opacity: 1;
+        background: #fff;
+        z-index: 9;
+        height: 100%;
+    }
+    .mobileMenuClose {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+    .navigation .menu .dropdown::after {
+        position: absolute;
+        right: -25px;
+        top: 0;
+    }
+    .navigation .menu li.dropdown:hover .submenu {
+        position: unset;
+        border: 0;
+        box-shadow: none;
+    }
+    .navigation .menu li.dropdown .submenu a {
+        color: var(--color-grey-3);
+    }
+    .mainTabsSection .productItem:not(:last-child) {
+        margin-right: 0;
+    }
+    .tabsContent [data-tab-content].active {
+        flex-wrap: wrap;
+    }
+    .mainNewsWrap {
+        flex-wrap: wrap;
+    }
+    .mainNewsItem {
+        width: 50%;
+    }
+    .navigation {
+        margin-top: 10px;
+    }
+}
 
+@media screen and (max-width: 768px) {
+    .formCardBig .formHorizont {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .formCardBig form .input {
+        width: 100%;
+    }
+    .formCardBig form input:not(:last-of-type) {
+        margin-right: 0;
+    }
+    .info {
+        grid-area: 4 / 1 / 4 / 2;
+    }
+    .mainCatalogItem img {
+        width: 100%;
+    }
+    .blockPhones,
+    .shopBlock  {
+        display: none;
+    }
+    .mobilePanel .shopBlock  {
+        display: block;
+    }
+    .mobilePanel .blockPhones {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+    .blockPhones .phones,
+    .topPanel {
+        display: none;
+    }
+    .mobilePanel {
+        display: flex;
+        align-items: center;
+        background: var(--gradient-main);
+        color: var(--color-white);
+        padding: 10px 15px;
+    }
+    .blockPhones .img {
+        position: unset;
+        left: 0;
+        top: 0;
+    }
+    .btnOrderPhone {
+        margin: 0 0 0 10px;
+        color: var(--color-white);
+    }
+    .mobilePanel .img {
+        filter: invert(13%) sepia(53%) saturate(5%) hue-rotate(365deg) brightness(170%) contrast(123%);
+    }
+    .mobilePanel .shopBlock img {
+        filter: invert(13%) sepia(53%) saturate(4%) hue-rotate(865deg) brightness(2170%) contrast(123%);
+    }
+    .shopBlock .count span {
+        background: var(--color-white);
+        color: var(--color-org);
+    }
+    .btnCatalog {
+        background: var(--color-org);
+        margin: 0 auto;
+    }
+    .mobileMenu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }

@@ -70,7 +70,17 @@ let ready = () => {
             navigation: {
                 nextEl: nx,
                 prevEl: pr
-            }
+            },
+            breakpoints: {
+                // when window width is >= 320px
+                320: {
+                  slidesPerView: 2
+                },
+                // when window width is >= 640px
+                768: {
+                  slidesPerView: 4
+                }
+              }
         });
     }
 
@@ -117,8 +127,7 @@ let ready = () => {
             }
         }
     });
-
-
+    
     // Слайдеры конец
 
     // Переключение отображения каталога начало
@@ -417,6 +426,67 @@ let ready = () => {
     }
     closeElement('.productPageUpsalesContentsBody_dinamic','.productPageUpsalesContentsBody_item');
 
+    /*
+        Перенос элементов в мобильной верстке
+    */
+
+    let tablet = false;
+    let mobile = false;
+
+    function mobileElements (e) {
+        
+        // Куда переносим
+        let mobileMenu = document.querySelector('.mobileMenu');
+        let headerWrap = document.querySelector('.headerWrap');
+        let mobilePanel = document.querySelector('.mobilePanel');
+        //Что переносим
+        let menu = document.querySelector('.navigation .menu');
+        let city = document.querySelector('.city');
+        let burgerMenu = document.querySelector('.burgerMenu');
+        let topSocial = document.querySelector('.topSocial');
+        let blockPhones = document.querySelector('.blockPhones');
+        let shopBlock = document.querySelector('.shopBlock');
+        let workingHours = document.querySelector('.workingHours');
+        let btnCatalog = document.querySelector('.btnCatalog');
+
+
+        if(window.outerWidth < 993) {
+
+            if(tablet != true) {
+                mobileMenu.prepend(menu.cloneNode(true));
+                tablet = true;
+            }
+        }
+        
+        if(window.outerWidth < 768) {
+
+            if(mobile != true) {
+                mobileMenu.prepend(city.cloneNode(true));
+                mobileMenu.append(btnCatalog.cloneNode(true));
+                mobileMenu.append(topSocial.cloneNode(true));
+                mobileMenu.append(workingHours.cloneNode(true));
+
+                mobilePanel.prepend(shopBlock.cloneNode(true));
+                mobilePanel.prepend(blockPhones.cloneNode(true));
+
+                headerWrap.insertAdjacentElement('beforeend', burgerMenu);
+            
+                mobile = true;
+            }
+        }
+    }
+    mobileElements();
+
+    window.addEventListener('resize', e => {
+        mobileElements();
+    })
+
+    let burgerMenu = document.querySelector('.burgerMenu');
+    let mobileMenu = document.querySelector('.mobileMenu');
+    let mobileMenuClose = document.querySelector('.mobileMenuClose');
+
+    burgerMenu.addEventListener('click', e => mobileMenu.classList.add('active'));
+    mobileMenuClose.addEventListener('click', e => mobileMenu.classList.remove('active'));
 }
 
 document.addEventListener('DOMContentLoaded', ready);
