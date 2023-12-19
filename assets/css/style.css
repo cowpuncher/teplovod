@@ -1154,6 +1154,9 @@ input[type="range"]:active::-webkit-slider-thumb{
     font-weight: 500;
     border-radius: 0 3px 3px 0;
 }
+.dropdownMenuWrapClose {
+    display: none;
+}
 /* .productItemBottom {
     display: flex;
     align-items: center;
@@ -1587,8 +1590,12 @@ input::-webkit-inner-spin-button {
     width: 100%;
 }
 /* ANCHOR Каталог на главной */
-.mainCatalogList {
+.mainCatalogList,
+.mainCatalogListMobile {
     margin: -15px;
+}
+.mainCatalogListMobile {
+    display: none;
 }
 .mainCatalogWrap {
     display: flex;
