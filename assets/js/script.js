@@ -9,7 +9,7 @@ let ready = () => {
             }
         });
     }
-    // Кнопка показать еще 
+    // Кнопка показать еще в блоке
     const moreButton = (element, text, icon) => {
         let arButtons = document.querySelectorAll(element);
         let arrow = '';
@@ -60,7 +60,6 @@ let ready = () => {
             })
         }
     }   
-
     // Общие функции
 
     // Выпадающее меню начало
@@ -75,7 +74,6 @@ let ready = () => {
         submenuActive.innerHTML = '';
         menuImageActive.innerHTML = '';
     }
-
     btnCatalog.addEventListener('click', e => {
         dropdownMenu.classList.toggle('active');
     });
@@ -112,7 +110,6 @@ let ready = () => {
 
     // Слайдеры начало
     var sliderWrap = document.getElementsByClassName("sliderWrap");
-
     for(var i = 0; i < sliderWrap.length; i++) {
     
         var el = sliderWrap[i];  
@@ -140,8 +137,6 @@ let ready = () => {
               }
         });
     }
-
-
     const sliderThumbs = new Swiper('.slider__thumbs', { // ищем слайдер превью по селектору
         // задаем параметры
         direction: 'vertical', // вертикальная прокрутка
@@ -184,7 +179,6 @@ let ready = () => {
             }
         }
     });
-    
     // Слайдеры конец
 
     // Переключение отображения каталога начало
@@ -251,8 +245,6 @@ let ready = () => {
                 break;
         }
     }
-
-
     // Переключение отображения каталога конец
     
     // Табы начало
@@ -273,10 +265,8 @@ let ready = () => {
             })
         }
     }
-
     let tabs1 = document.querySelector('.productPageContent_tabs');
     let tabsContent1 = document.querySelector('.productPageContent_content');
-
     if(tabs1) {
         for(var i = 0; i < tabs1.children.length; i++) {
             tabs1.children[i].addEventListener('click', e => {
@@ -290,9 +280,7 @@ let ready = () => {
             })
         }
     }
-
     let catalogTopGrid = document.querySelectorAll('.catalogTopGrid a');
-
     for(var i = 0; i < catalogTopGrid.length; i++) {
         if(catalogTopGrid[i].classList.contains('active')) {
             changeCatalogView(catalogTopGrid[i].dataset.view);
@@ -306,11 +294,9 @@ let ready = () => {
             changeCatalogView(e.currentTarget.dataset.view);
         });
     }
-    
     // Табы конец
 
     // Рейндж количества начало
-
     let rangeWrap = document.querySelectorAll('.rangeWrap');
 
     for(var i = 0; i < rangeWrap.length; i++) {
@@ -346,20 +332,16 @@ let ready = () => {
             slideTwo();
         })
     }
-    // Рейндж количества конец
-
-    
+    // Рейндж количества конец    
     // Табы фильтра начало
     let filterListItemTop = document.querySelectorAll('.filterListItem_top');
     let moreBtnFilter = document.querySelectorAll('.filterListItem .moreBtn');
-
     for(var i = 0; i < filterListItemTop.length; i++) {
         filterListItemTop[i].addEventListener('click', e => {
             e.currentTarget.closest('.filterListItem').classList.toggle('active');
            
         });
     }
-
     for(var i = 0; i < moreBtnFilter.length; i++) {
         moreBtnFilter[i].addEventListener('click', e => {
             let items = e.currentTarget.closest('.filterListItem_checkbox').querySelectorAll('.filterListItem_row');
@@ -372,7 +354,6 @@ let ready = () => {
             e.currentTarget.classList.add('hidden');
         });
     }
-
     // Табы фильтра конец
 
     // --------- Кастомовые селекты на странице начало
@@ -460,21 +441,16 @@ let ready = () => {
     }
     customSelect("customSelect", 0);
     customSelect("deliverySelect", 0);
-
     // --------- Кастомовые селекты на странице конец
-
-
     /*
         Продуктовые аналоги,всплывающие окна 
     */
     let productPageUpsalesContentsBodyItem = document.querySelectorAll('.productPageUpsalesContentsBody_item');
-    
     const closeProduct = () => {
         for(var i = 0; i < productPageUpsalesContentsBodyItem.length; i++) {
             productPageUpsalesContentsBodyItem[i].classList.remove('active');
         }
     }
-
     for(var i = 0; i < productPageUpsalesContentsBodyItem.length; i++) {
         productPageUpsalesContentsBodyItem[i].addEventListener('click', e => {
             closeProduct();
@@ -482,16 +458,11 @@ let ready = () => {
         });
     }
     closeElement('.productPageUpsalesContentsBody_dinamic','.productPageUpsalesContentsBody_item');
-
-
-
     /*
         Перенос элементов в мобильной верстке
     */
-
     let tablet = false;
     let mobile = false;
-
     function mobileElements (e) {
         
         // Куда переносим
@@ -548,11 +519,51 @@ let ready = () => {
         }
     }
     mobileElements();
+    // Узнать больше для секций
+    let moreBtn = document.querySelectorAll('.moreBtn');
 
+    if(moreBtn) { 
+        const funcMoreButtonActive = (section, elements, counter ) => {
+            for(var i = 0; i < moreBtn.length; i++) {
+                let arElemHide = moreBtn[i].closest(section).querySelectorAll(elements);
+                
+                if(arElemHide.length > counter) {
+                    for(var ii = 0; ii < arElemHide.length; ii++) {
+                        if(ii > counter) {
+                            arElemHide[ii].classList.add('hide');
+                        }
+                    }
+                }
+            }
+        }        
+        const showElements = (target, block, elements, count ) => {
+            if(target.closest(block)) {  
+                let wrapperBlock = target.closest(block);  
+                let bestItem = wrapperBlock.querySelectorAll(elements +'.hide');        
+                if(bestItem.length < count) {
+                    target.classList.add('hide');
+                }   
+                for(var i = 0; i < count; i++) {
+                    if(bestItem.length > 0) {
+                        bestItem[i].classList.remove('hide');
+                    }
+                } 
+            }
+        }
+        // активация секции с кнопкой
+        funcMoreButtonActive('.mainCatalog', '.mainCatalogListMobile .mainCatalogItem', 3);
+        moreBtn.forEach(button =>
+            button.addEventListener('click', e => {
+                e.preventDefault();
+                showElements(e.target, '.mainCatalog', '.mainCatalogItem', 2 );
+            })
+        );
+    }
+    // Изменение размера экрана
     window.addEventListener('resize', e => {
         mobileElements();
     })
-
+    // Бургер меню
     let burgerMenu = document.querySelector('.burgerMenu');
     let mobileMenu = document.querySelector('.mobileMenu');
     let mobileMenuClose = document.querySelector('.mobileMenuClose');
