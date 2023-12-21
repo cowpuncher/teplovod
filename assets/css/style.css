@@ -950,6 +950,8 @@ input[type="range"]:active::-webkit-slider-thumb{
 .tableItem {
     width: 32%;
     text-align: center;
+    max-width: 300px;
+    width: 100%;
 }
 /* ANCHOR -- reviews */
 .reviewList .review {
@@ -2631,6 +2633,7 @@ input::-webkit-inner-spin-button {
 .compareCards {
     gap: 21px;
     margin-bottom: 27px;
+    justify-content: flex-end;
 }
 .compareBottom {
     gap: 21px;
@@ -2642,6 +2645,11 @@ input::-webkit-inner-spin-button {
 .compareBottom .productItemBody {
     padding-top: 0;
     text-align: center;
+}
+.compareCards .productItem,
+.compareBottom .productItem {
+    width: 100%;
+    max-width: 328px;
 }
 .inCard {
     background: var(--color-org);
@@ -2698,6 +2706,9 @@ input::-webkit-inner-spin-button {
     max-width: 93px;
     max-height: 111px;
     overflow: hidden;
+}
+.basketListItem .image {
+    max-width: 93px;
 }
 .basketListItem .image img {
     width: 100%;
@@ -3032,6 +3043,7 @@ input::-webkit-inner-spin-button {
     left: 0;
     min-width: 680px;
     padding: 25px;
+    z-index: 1;
 }
 
 .productPageUpsalesContentsBody_item.active .productPageUpsalesContentsBody_dinamic {

@@ -3,6 +3,35 @@
     .partnersPageItem {
         width: 22%;
     }
+    .privilegeList {
+        flex-wrap: wrap;
+    }
+    .privilegeListItem {
+        width: 20%;
+    }
+    .team {
+        flex-wrap: wrap;
+    }
+    .teamItem .image img {
+        width: 100%;
+    }
+    .teamItem {
+        display: flex;
+        width: 22%;
+    }
+    .orderSuccess .image img,
+    .basketPageContent .image img {
+        width: 100%;
+    }
+    .basketListItem .totalPrice {
+        margin-right: 20px;
+    }
+    .watchedList {
+        flex-wrap: wrap;
+    }
+    .watchedItem {
+        width: 100%;
+    }
 }
 @media screen and (max-width: 1340px) {
     .formSearch {
@@ -24,6 +53,19 @@
     }
     .partnersPageItem {
         width: 30%;
+    }
+    .basketListItem .counter {
+        margin: 0 10px 0;
+    }
+    .basketListItem .totalPrice, .basketListItem .price {
+        font-size: 15px;
+    }
+    .deliverySelectWrap {
+        width: 47.6%;
+    }
+    .productPageContent_tabs span,
+    .productPageUpsalesContentsBody_more {
+        font-size: 18px;
     }
 }
 
@@ -83,12 +125,128 @@
     .partnersPageItem {
         width: 29%;
     }
-    .payPageWrap:last-child {
+    .deliveryPriceCard:first-child {
+        margin: 0;
+    }
+    .deliveryPriceCards {
+        gap: 20px;
+    }
+    .payPageWrap:last-child,
+    .deliveryPriceCards,
+    .deliveryPage {
         flex-wrap: wrap;
+    }
+    .deliveryPageCard {
+        width: 48%;
+    }
+    .deliveryPriceBottom {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .catalogListItem {
+        width: 22.38%;
+    }
+    .catalogListItem {
+        font-size: 12px;
+    }
+    .orderSuccess {
+        padding: 40px;
+        margin-bottom: 20px;
+    }
+    .basketListItem {
+        flex-wrap: wrap;
+        position: relative;
+        align-items: flex-start;
+    }
+    .deleteCard {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        width: 20px;
+    }
+    .basketListItem .title {
+        max-width: 100%;
+        width: 81%;
+    }
+    .deleteCard img {
+        width: 100%;
+    }
+    .basketListItem .image {
+        max-width: 93px;
+        margin-bottom: 20px;
+    }
+    .contentPage .sectionTitle {
+        font-size: 22px;
+    }
+    .sectionTitle .link,
+    .sectionTitle .btn {
+        font-size: 14px;
+    }
+    
+    .compare .tableHead {
+        margin-right: auto;
+        width: 100%;
+    }
+    .tableRow {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+    .compare .tableItem {
+        max-width: 279px;
+    }
+    .sliderProduct {
+        gap: 10px;
+        margin-right: 10px;
+    }
+    .productPageCard {
+        padding: 15px;
+        flex-direction: row;
+    }
+    .productPageUpsalesContentsBody_list {
+        flex-wrap: wrap;
+    }
+    .productPageUpsales {
+        padding: 30px;
+        margin: 30px 0 40px;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .sliderProduct {
+        flex-direction: column-reverse;
+    }
+    .slider__thumbs, .slider__images {
+        height: auto;
+        width: 100%;
+        margin: 0;
+    }
+    .swiper-slide img {
+        margin: 0;
+        width: 100%;
+    }
+    .sliderProduct,
+    .productInfo {
+        width: 50%;
+    }
+    .productPageCard {
+        align-items: flex-start;
+    }
+    .sliderProduct {
+        max-width: 550px;
     }
 }
 
 @media screen and (max-width: 993px) {
+    .sliderProduct {
+        max-width: 340px;
+    }
+    .basketListItem .title {
+        max-width: 100%;
+        width: 68%;
+    }
+    .deliveryPageCard {
+        width: 100%;
+    }
     .sectionTitle {
         font-size: 22px;
     }
@@ -209,24 +367,152 @@
     .newsPage .cardBottom__star {
         width: 68px;
     }
+    .basketTotal .checkedApproval,
     .newsPage .cardBottom__star img {
         width: 100%;
     }
+    .basketTotal .checkedApproval {
+        max-width: 100%;
+    }
+    .basketTotal .btnForm,
     .mainNewsItem p {
         font-size: 14px;
     }
+    .formCardBig .formHorizont {
+        margin-bottom: 20px;
+    }
+    .orderFormTabs_item,
     .cardBottom span, .cardTop span {
         font-size: 12px;
+    }
+    .deliverySelectWrap {
+        width: 100%;
+    }
+    .orderForms .wrap, .orderForms .orderFormPhysical .wrap {
+        flex-direction: column;
+    }
+    .basketTotal .wrap {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 20px;
     }
     .payPageVariant {
         width: 100%;
         padding: 15px;
     }
+    .privilegeListItem {
+        width: 100%;
+    }
+    .catalogListItem {
+        width: 34%;
+    }
+    .innerPage .whyListItem {
+        width: 100%;
+        min-height: 1px;
+    }
+    .formCardBig form input:not(:last-of-type) {
+        margin-right: 0;
+    }
+    .formCardBig .formHorizont {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .formCardBig form .input {
+        width: 100%;
+    }
+    .catalogListWrap {
+        margin: -5px;
+    }
+    .catalogListItem {
+        width: 48%;
+        margin: 5px;
+    }
+    .contactsWrap,
+    .mapSidebar {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .contentPage .contacts {
+        margin-bottom: 20px;
+    }
+    .contactsList,
+    .contentPage .mapSidebar {
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
+    }
+    .mapWrapper {
+        flex-direction: column-reverse;
+    }
+    .payPageRequisite_row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .recapcha img {
+        width: 100%;
+    }
+    .formSection .wrap {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .contactsRequisite {
+        margin: 20px 0;
+    }
+    
+    .orderSuccess .wrap {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .basketPageContent {
+        flex-direction: column-reverse;
+
+    }
+    .orderSuccessInfo .title {
+        font-size: 22px;
+    }
+    .basketPageContent .image img {
+        max-width: 150px;
+    }
+    .productItemPrice {
+        font-size: 22px;
+    }
+    .delete {
+        font-size: 10px;
+    }
+    .inCard,
+    .oneClick {
+        font-size: 14px;
+    }
+    .productItemAbout__title {
+        font-size: 12px;
+        line-height: 15px;
+    }
+    .productItemAbout__stars .stars img {
+        width: 95px;
+    }
+    .productItemBody .image img {
+        width: 100%;
+    }
+    .tableItem {
+        max-width: 47%;
+    }
+    .compareBottom .productItem {
+        padding: 10px;
+    }
 }
 
 @media screen and (max-width: 768px) {
-    .innerPage {
+    .innerPage,
+    .productPageContent {
         flex-direction: column-reverse;
+    }
+    .productPageCard {
+        flex-direction: column;
+    }
+    .sliderProduct {
+        margin: 0 auto;
     }
     .sidebar {
         max-width: 100%;
@@ -259,14 +545,22 @@
     .sidebar .newsList .date,
     .sidebar .help p,
     .partnersPageItem .desc,
-    .breadcrumbs a {
+    .breadcrumbs a,
+    .orderSuccessInfo .small,
+    .select-selected,
+    .select-items div {
         font-size: 12px;
     }
+    .basketTotalInfo,
+    .orderSuccessInfo .desc,
     .sidebar .newsList a,
     .sidebar .mail a,
     .partnersPageItem .name,
     .sidebar .phones a {
         font-size: 14px;
+    }
+    .basketTotalInfo_total {
+        font-size: 16px;
     }
     .sidebar .title {
         font-size: 16px;
@@ -275,6 +569,9 @@
     .partnersPageItem__info {
         width: 100%;
     }
+    .basketListItem .title {
+        width: 60%;
+    }
     .partnersPageItem__info {
         width: 65%;
     }
@@ -282,9 +579,13 @@
     .breadcrumbs a {
         margin-right: 5px;
     }
+    .contentPage .sectionTitle,
     .formCardBig .formHorizont {
         flex-direction: column;
         gap: 20px;
+    }
+    .contentPage .sectionTitle {
+        align-items: flex-start;
     }
     .dinamicPanel {
         padding: 10px 0 10px;
@@ -306,6 +607,11 @@
         align-items: center;
         margin: 0;
         justify-content: flex-end;
+    }
+    .orderSuccess .image img {
+        width: 100%;
+        max-width: 83px;
+        margin-top: 15px;
     }
     .dinamicPanel .blockPhones .phones,
     .topPanel,
@@ -462,19 +768,133 @@
     .cardBottom__star img {
         width: 100%;
     }
+    .productInfo {
+        width: 100%;
+    }
 }
 
+@media (min-width: 768px) and (max-width: 850px) {
+
+    .watchedItem {
+        position: relative;
+        padding-bottom: 90px;
+    }
+    .watchedItem .productInfoPricesButtons{
+        position: absolute;
+        bottom: 10px;
+        left: 15px;
+    }
+}
 
 @media screen and (max-width: 576px) {
+    .sliderProduct {
+        max-width: 100%;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .reviewForm_block {
+        flex-wrap: wrap-reverse;
+    }
+    .reviewCards {
+        flex-wrap: wrap;
+    }
+    .watchedItem {
+        position: relative;
+        padding-bottom: 90px;
+    }
+    .productInfoPricesButtons {
+        margin: 20px 0 13px;
+        gap: 0; 
+    }
+    .watchedItem .productInfoPricesButtons{
+        position: absolute;
+        bottom: 10px;
+        left: 15px;
+    }
+    .productPageContentItem.card {
+        padding: 15px;
+    }
+    .slider__thumbs .swiper-slide {
+        height: auto!important;
+    }
+    .productInfoRow {
+        border-bottom: 1px solid #BDBDBD;
+        padding: 0 0 10px 0;
+        margin-bottom: 10px;
+    }
+    .productInfoAbout__maker {
+        font-size: 8px;
+    }
+    .watchedItem .name,
+    .deliveryPriceBottom .formCounter,
+    .productInfoDelivery .productInfoAbout__list li,
+    .productInfoPricesButtons_col .link,
+    .productInfoAbout__list li {
+        font-size: 10px;
+    }
+    .productPageContent_content ul li {
+        font-size: 12px;
+    }
+    .productInfo .sectionTitle {
+        font-size: 14px;
+    }
+    .watchedItem .productInfoPrices__main,
+    .productInfoPricesButtons_col .btn {
+        font-size: 16px;
+    }
+    .productInfoPrices__del {
+        font-size: 18px;
+    }
+    .productInfoPrices__main {
+        font-size: 22px;
+    }
     h2 {
         font-size: 22px;
     }
-    h3 {
+   .productInfoDelivery .deliveryPriceBottom .formCounter,
+   .productInfoDelivery .deliveryPriceBottom .result {
+        padding: 0;
+    }
+    .deliveryPageCard_list {
+        display: flex;
+        justify-content: space-between;
+    }
+    .deliveryPageCard_list_item:not(:last-child) {
+        margin-bottom: 0;
+    }
+    .deliveryPageCard_list {
+        display: flex;
+    }
+    .deliveryPageCard_list_item .icon img {
+        width: 66px;
+    }
+    .deliveryPageCard_list_item .icon {
+        margin: 0;
+    }
+    .deliveryPageCard_list_item {
+        flex-direction: column;
+        align-items: center;
+    }
+    h3,
+    .deliveryPageCard .title span {
         font-size: 16px;
         font-weight: 700;
     }
+    .deliveryPageCard .time {
+        font-size: 18px;
+    }
+    .deliveryPageCard_list {
+        display: flex;
+        justify-content: space-between;
+    }
+    .deliveryPriceCard,
+    .deliveryPageCard .deliveryPageCard_list a,
     .mainCatalogItem li a {
         font-size: 12px;
+    }
+    .deliveryPageCard .btn,
+    .deliveryPageCard .title {
+        font-size: 16px;
     }
     .mainCatalogItem li {
         margin-top: 10px;
@@ -544,7 +964,8 @@
     .cardBottom__star,
     .cardBottom__eye,
     .mainNewsItem p,
-    .mapSidebar address {
+    .mapSidebar address,
+    .deliveryPriceCard .desc {
         font-size: 10px;
         line-height: 15px;
     }
@@ -560,10 +981,40 @@
     .payPageVariant .text,
     .payPageVariant .desc,
     .payPageRequisite_row .info,
-    .payPageTermsCard li {
+    .payPageTermsCard li,
+    .deliveryPriceCard,
+    .deliveryPriceBottom .formCounter,
+    .deliveryTermsCard,
+    .teamItem .position,
+    .contactsListItem_info a,
+    .contactsListItem_info,
+    .contactsPerson .name {
         font-size: 12px;
         line-height: 15px;
     }
+    .contactsPerson a,
+    .contactsListItem_label {
+        font-size: 16px;
+    }
+    .contactsPerson .title {
+        font-size: 18px;
+    }
+    .teamItem .position,
+    .teamItem .name {
+        text-align: center;
+    }
+    .contactsPerson,
+    .contactsList {
+        padding: 15px;
+    }
+    .team {
+        gap: 20px;
+    }
+    .deliveryPrice,
+    .deliveryTerms {
+        margin-bottom: 20px;
+    }
+    .contactsRequisiteCard .payPageWrap .payPageRequisite_row .name,
     .payPageRequisite_row .name {
         font-size: 14px;
         font-weight: 500;
@@ -575,6 +1026,22 @@
     .productItemPrice {
         font-size: 22px;
         margin: 10px 0 20px;
+    }
+    .deliveryPriceBottom .result {
+        font-size: 18px;
+        padding: 15px 0;
+    }
+    .deliveryPriceBottom input {
+        font-size: 16px;
+        margin: 0 5px;
+    }
+    .deliveryPriceBottom .formCounter {
+        padding: 10px 15px;
+        margin-right: 0;
+    }
+    .deliveryPriceBottom input {
+        width: 70px;
+        height: 35px;
     }
     .payPageRequisite .title, .payPageTerms .title {
         margin-bottom: 20px;
@@ -628,7 +1095,7 @@
         font-size: 14px;
     }
     .mapWrapper {
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
     .mapSidebar {
         gap: 15px;
@@ -680,7 +1147,9 @@
         width: 50%;
         margin: -70px 0 0;
     }
-    .footerInfo .workingHours {
+    .teamItem .name,
+    .footerInfo .workingHours,
+    .privilegeListItem .title {
         font-size: 16px;
         margin-bottom: 0;
     }
@@ -741,13 +1210,16 @@
         right: 5px;
         width: 18px;
     }
+    .productItemAbout__stars .count,
     .btnOrderPhone {
         font-size: 14px;
     }
     .sectionTitle {
         margin-bottom: 20px;
     }
-    
+    .privilege .image {
+        margin: 0 10px 0 0;
+    }
     .newsPage .mainNewsItem {
         width: 100%;
     }
@@ -758,5 +1230,39 @@
         flex-direction: column;
         align-items: flex-start;
         margin-bottom: 10px;
+    }
+    .teamItem {
+        display: flex;
+        width: 37%;
+    }
+    .mainPage .content img {
+        display: none;
+    }
+    .catalogListItem {
+        width: 46%;
+    }
+    .contentPage .sectionTitle {
+        font-size: 20px;
+    }
+    .privilegeListItem {
+        width: 100%;
+        flex-direction: row;
+    }
+    .table {
+        padding: 10px;
+    }
+    .tableItem {
+        max-width: 45%;
+    }
+    .productItemAbout__stars .count .icon,
+    .delete .icon {
+        margin-right: 5px;
+    }
+    .tableRow {
+        padding: 10px;
+    }
+    .table {
+        font-size: 12px;
+        font-weight: 500;
     }
 }

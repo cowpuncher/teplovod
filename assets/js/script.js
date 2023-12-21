@@ -139,7 +139,7 @@ let ready = () => {
     }
     const sliderThumbs = new Swiper('.slider__thumbs', { // ищем слайдер превью по селектору
         // задаем параметры
-        direction: 'vertical', // вертикальная прокрутка
+        direction: 'horizontal', // вертикальная прокрутка
         slidesPerView: 6, // показывать по 3 превью
         spaceBetween: 7, // расстояние между слайдами
         navigation: { // задаем кнопки навигации
@@ -151,7 +151,7 @@ let ready = () => {
             0: { // при 0px и выше
                 direction: 'horizontal', // горизонтальная прокрутка
             },
-            768: { // при 768px и выше
+            1080: { // при 768px и выше
                 direction: 'vertical', // вертикальная прокрутка
             }
         }
@@ -159,7 +159,7 @@ let ready = () => {
     // Инициализация слайдера изображений
     const sliderImages = new Swiper('.slider__images', { // ищем слайдер превью по селектору
         // задаем параметры
-        direction: 'vertical', // вертикальная прокрутка
+        direction: 'horizontal', // вертикальная прокрутка
         slidesPerView: 1, // показывать по 1 изображению
         mousewheel: false, // можно прокручивать изображения колёсиком мыши
         navigation: { // задаем кнопки навигации
@@ -174,7 +174,7 @@ let ready = () => {
             0: { // при 0px и выше
                 direction: 'horizontal', // горизонтальная прокрутка
             },
-            768: { // при 768px и выше
+            1080: { // при 768px и выше
                 direction: 'vertical', // вертикальная прокрутка
             }
         }

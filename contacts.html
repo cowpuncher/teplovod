@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="/assets/fonts/style.css">
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/media.css">
     <title>Верстка Тепловод</title>
 </head>
 <body>
@@ -18,20 +19,41 @@
                     <div class="wrap jcsb aic">
                         <div class="city wrap aic">
                             <div class="icon">                            
-                                <img src="/assets/img/geo.svg" alt="geo">
+                                <!--<img src="/assets/img/geo.svg" alt="geo">-->
+                                <svg width="24" height="24">
+                                    <use xlink:href="#geo"></use>
+                                </svg>
                             </div>
                             Москва
                         </div>
                         <div class="topSocial">
                             <div class="social wrap aic">
-                                <a href="#"><img src="/assets/img/soc-1.svg" alt="social-img"></a>
-                                <a href="#"><img src="/assets/img/soc-2.svg" alt="social-img"></a>
-                                <a href="#"><img src="/assets/img/soc-3.svg" alt="social-img"></a>
-                            </div>
+                                <a href="#">
+                                    <!--<img src="/assets/img/soc-1.svg" alt="social-img">-->
+                                    <svg width="24" height="24">
+                                        <use xlink:href="#whatsapp"></use>
+                                    </svg>
+                                </a>
+                                <a href="#">
+                                    <!--<img src="/assets/img/soc-1.svg" alt="social-img">-->
+                                    <svg width="24" height="24">
+                                        <use xlink:href="#telegram"></use>
+                                    </svg>
+                                </a>
+                                <a href="#">
+                                    <!--<img src="/assets/img/soc-1.svg" alt="social-img">-->
+                                    <svg width="24" height="24">
+                                        <use xlink:href="#viber"></use>
+                                    </svg>
+                                </a>
+                             </div>
                         </div>
                         <div class="workingHours wrap aic">
                             <div class="icon">     
-                                <img src="/assets/img/time.svg" alt="time">
+                                <!--<img src="/assets/img/time.svg" alt="time">-->
+                                <svg width="21" height="24" >
+                                    <use xlink:href="#time"></use>
+                                </svg>
                             </div>
                             Пн-Пт: 09:00-18:00
                         </div>
@@ -70,6 +92,7 @@
                         </div>
                     </div>
                 </div>
+                <div class="mobilePanel"></div>
                 <nav class="navigation">
                     <div class="container">
                         <div class="navigationWrap wrap aife jcsb">
@@ -91,7 +114,13 @@
                                 <li><a href="#">Доставка</a></li>
                                 <li><a href="#">Блог</a></li>
                                 <li><a href="#">Контакты</a></li>
-                            </ul>                        
+                            </ul>    
+                            <button class="burgerMenu">
+                                <span></span><span></span><span></span>
+                            </button>  
+                            <div class="mobileMenu">
+                                <span class="mobileMenuClose"><img src="/assets/img/closeMenu.svg" alt=""></span>
+                            </div>                  
                         </div>
                     </div>
                 </nav>
